@@ -36,12 +36,14 @@ void TECFS_Disk::initDisk() {
     string diskDirectory = diskPath + "/Disk";
     if (isFirstDisk){
         for (auto& path: filesystem::directory_iterator(diskPath)) {
+            cout<<path.path()<<endl;
             filesystem::remove_all(path.path());
         }
         TECFS_Disk::diskNumber = 1;
     }else {
         ++diskNumber;
     }
+
     diskDirectory = diskDirectory + "_" + to_string(diskNumber);
     filesystem::create_directory(diskDirectory);
 }

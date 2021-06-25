@@ -14,10 +14,10 @@ private:
     int blockSize;
     bool isFirstDisk;
     static int diskNumber;
-public:
-    TECFS_Disk(string IP, int port, string path, int diskSize, int blockSize, bool isFirstDisk = false);
 
     void initDisk();
+public:
+    TECFS_Disk(string IP, int port, string path, int diskSize, int blockSize, bool isFirstDisk = false);
 
     const string &getIp() const;
 
