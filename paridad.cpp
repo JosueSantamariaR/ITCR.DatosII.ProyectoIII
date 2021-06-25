@@ -61,8 +61,6 @@ string Paridad::checkeo(const string& variable, bool paridad) {
     return variable.substr(0,variable.size()-1);
 }
 
-
-}
 string Paridad::paridad(const string& variable, bool paridad) {
     for(temp:variable){
         unsigned int temp2=(unsigned int)((unsigned char)a)M;
@@ -84,6 +82,22 @@ string Paridad::paridad(const string& variable, bool paridad) {
         if(!paridad){
             return  variable+string("1");
 
-        }else{
-            return variable+string ("0");
+        }else {
+            return variable + string("0");
         }
+    }
+}
+void Paridad::XOR_Rebuild(vector<string> &var) {
+    unsigned long tamano=var[0].size();
+    string compXOR("",tamano);
+    while (tamano>0){
+        char temp=var[0][tamano-1];
+        for (int i=1;i<var.size();++i){
+            temp=(char)(temp^var[i][size-1]);
+        }
+        compXOR.data()[size-1]=temp;
+        tamano--;
+    }
+    var.push_back(compXOR);
+
+}

@@ -7,6 +7,8 @@
 
 
 #include <string>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 
@@ -14,6 +16,8 @@ class Paridad {
 public:
     string paridad(const string&, bool paridad=true);
     string checkeo(const string&, bool paridad=true);
+    void XOR_Rebuild(vector<string>&);
+
 };
 
 
