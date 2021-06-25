@@ -1,9 +1,13 @@
-/*
+/**
   * @file paridad.cpp
   * */
 #include "paridad.h"
 
-
+/**
+ * @brief Metodo para revisar los valores de paridad
+ * @param string& variable, bool paridad
+ * @authors Ricardo&Yordi&Josue
+ */
 string Paridad::checkeo(const string& variable, bool paridad) {
 
     bool tempParidad=false;
@@ -60,7 +64,11 @@ string Paridad::checkeo(const string& variable, bool paridad) {
     }
     return variable.substr(0,variable.size()-1);
 }
-
+/**
+ * @brief Metodo para generar paridad segun los datos pasados
+ * @param string& variable, bool paridad
+ * @authors Ricardo&Yordi&Josue
+ */
 string Paridad::paridad(const string& variable, bool paridad) {
     for(temp:variable){
         unsigned int temp2=(unsigned int)((unsigned char)a)M;
@@ -87,6 +95,12 @@ string Paridad::paridad(const string& variable, bool paridad) {
         }
     }
 }
+/**
+ * @brief Metodo para reconstruir informaciòn mendiante xor
+ * @param vector<string> &var
+ * @authors Ricardo&Yordi&Josue
+ */
+
 void Paridad::XOR_Rebuild(vector<string> &var) {
     unsigned long tamano=var[0].size();
     string compXOR("",tamano);

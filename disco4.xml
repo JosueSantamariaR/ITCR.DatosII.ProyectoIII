@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Disk>
+    <IP>"127.0.0.1"</IP>
+    <PORT>8080</PORT>
+    <PATH>"../RAID5"/</PATH>
+    <DISKSIZE>1000</DISKSIZE>
+    <BLOCKSIZE>100</BLOCKSIZE>
+</Disk>
